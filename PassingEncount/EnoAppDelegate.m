@@ -7,15 +7,20 @@
 //
 
 #import "EnoAppDelegate.h"
+#import "EnoTabBarController.h"
 
 @implementation EnoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    EnoTabBarController *top = [[EnoTabBarController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = top;
+    
     return YES;
 }
 

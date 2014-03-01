@@ -19,6 +19,11 @@
 		9E76E82218C19B0800D409D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76E80A18C19B0800D409D6 /* UIKit.framework */; };
 		9E76E82A18C19B0800D409D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E76E82818C19B0800D409D6 /* InfoPlist.strings */; };
 		9E76E82C18C19B0800D409D6 /* PassingEncountTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E82B18C19B0800D409D6 /* PassingEncountTests.m */; };
+		9E76E83D18C19DCF00D409D6 /* EnoTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E83C18C19DCF00D409D6 /* EnoTabBarController.m */; };
+		9E76E84118C19EEC00D409D6 /* EnoPassingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E83F18C19EEC00D409D6 /* EnoPassingViewController.m */; };
+		9E76E84218C19EEC00D409D6 /* EnoPassingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E76E84018C19EEC00D409D6 /* EnoPassingViewController.xib */; };
+		9E76E84618C1A0A400D409D6 /* EnoMyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E84418C1A0A400D409D6 /* EnoMyProfileViewController.m */; };
+		9E76E84718C1A0A400D409D6 /* EnoMyProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E76E84518C1A0A400D409D6 /* EnoMyProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,14 @@
 		9E76E82718C19B0800D409D6 /* PassingEncountTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PassingEncountTests-Info.plist"; sourceTree = "<group>"; };
 		9E76E82918C19B0800D409D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9E76E82B18C19B0800D409D6 /* PassingEncountTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassingEncountTests.m; sourceTree = "<group>"; };
+		9E76E83B18C19DCF00D409D6 /* EnoTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoTabBarController.h; sourceTree = "<group>"; };
+		9E76E83C18C19DCF00D409D6 /* EnoTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoTabBarController.m; sourceTree = "<group>"; };
+		9E76E83E18C19EEC00D409D6 /* EnoPassingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoPassingViewController.h; sourceTree = "<group>"; };
+		9E76E83F18C19EEC00D409D6 /* EnoPassingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoPassingViewController.m; sourceTree = "<group>"; };
+		9E76E84018C19EEC00D409D6 /* EnoPassingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnoPassingViewController.xib; sourceTree = "<group>"; };
+		9E76E84318C1A0A400D409D6 /* EnoMyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoMyProfileViewController.h; sourceTree = "<group>"; };
+		9E76E84418C1A0A400D409D6 /* EnoMyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoMyProfileViewController.m; sourceTree = "<group>"; };
+		9E76E84518C1A0A400D409D6 /* EnoMyProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnoMyProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +120,7 @@
 		9E76E80C18C19B0800D409D6 /* PassingEncount */ = {
 			isa = PBXGroup;
 			children = (
+				9E76E83518C19D2C00D409D6 /* VIewControllers */,
 				9E76E81518C19B0800D409D6 /* EnoAppDelegate.h */,
 				9E76E81618C19B0800D409D6 /* EnoAppDelegate.m */,
 				9E76E81818C19B0800D409D6 /* Images.xcassets */,
@@ -142,6 +156,21 @@
 				9E76E82818C19B0800D409D6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9E76E83518C19D2C00D409D6 /* VIewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E76E83B18C19DCF00D409D6 /* EnoTabBarController.h */,
+				9E76E83C18C19DCF00D409D6 /* EnoTabBarController.m */,
+				9E76E83E18C19EEC00D409D6 /* EnoPassingViewController.h */,
+				9E76E83F18C19EEC00D409D6 /* EnoPassingViewController.m */,
+				9E76E84018C19EEC00D409D6 /* EnoPassingViewController.xib */,
+				9E76E84318C1A0A400D409D6 /* EnoMyProfileViewController.h */,
+				9E76E84418C1A0A400D409D6 /* EnoMyProfileViewController.m */,
+				9E76E84518C1A0A400D409D6 /* EnoMyProfileViewController.xib */,
+			);
+			name = VIewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +251,8 @@
 			files = (
 				9E76E81118C19B0800D409D6 /* InfoPlist.strings in Resources */,
 				9E76E81918C19B0800D409D6 /* Images.xcassets in Resources */,
+				9E76E84218C19EEC00D409D6 /* EnoPassingViewController.xib in Resources */,
+				9E76E84718C1A0A400D409D6 /* EnoMyProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E76E84618C1A0A400D409D6 /* EnoMyProfileViewController.m in Sources */,
 				9E76E81318C19B0800D409D6 /* main.m in Sources */,
+				9E76E83D18C19DCF00D409D6 /* EnoTabBarController.m in Sources */,
 				9E76E81718C19B0800D409D6 /* EnoAppDelegate.m in Sources */,
+				9E76E84118C19EEC00D409D6 /* EnoPassingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
