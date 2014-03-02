@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EnoNSUserDefaults.h"
+#import "EnoProfileInfo.h"
+#import "EnoUIAsyncImageView.h"
+#import "EnoPassingTableViewCell.h"
 
-@interface EnoPassingViewController : UIViewController
+@interface EnoPassingViewController : UIViewController<
+    UITableViewDataSource,
+    UITableViewDelegate
+>
 
 @end

@@ -31,6 +31,8 @@
 		9E76E86618C260A400D409D6 /* EnoProfileJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86518C260A400D409D6 /* EnoProfileJsonParser.m */; };
 		9E76E86A18C271C600D409D6 /* EnoConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86918C271C600D409D6 /* EnoConst.m */; };
 		9E76E86D18C2785C00D409D6 /* EnoNSUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86C18C2785C00D409D6 /* EnoNSUserDefaults.m */; };
+		9E76E87018C2DE7F00D409D6 /* EnoPassingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86F18C2DE7F00D409D6 /* EnoPassingTableViewCell.m */; };
+		9E76E87218C2DED700D409D6 /* EnoPassingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E76E87118C2DED700D409D6 /* EnoPassingTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,9 @@
 		9E76E86918C271C600D409D6 /* EnoConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoConst.m; sourceTree = "<group>"; };
 		9E76E86B18C2785C00D409D6 /* EnoNSUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoNSUserDefaults.h; sourceTree = "<group>"; };
 		9E76E86C18C2785C00D409D6 /* EnoNSUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoNSUserDefaults.m; sourceTree = "<group>"; };
+		9E76E86E18C2DE7F00D409D6 /* EnoPassingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoPassingTableViewCell.h; sourceTree = "<group>"; };
+		9E76E86F18C2DE7F00D409D6 /* EnoPassingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoPassingTableViewCell.m; sourceTree = "<group>"; };
+		9E76E87118C2DED700D409D6 /* EnoPassingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnoPassingTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +148,7 @@
 				9E76E86718C2718B00D409D6 /* Utils */,
 				9E76E85D18C25F4200D409D6 /* Parsers */,
 				9E76E85C18C25E2800D409D6 /* Models */,
-				9E76E85318C1FF2400D409D6 /* Libs */,
-				9E76E84D18C1B46A00D409D6 /* Views */,
+				9E76E85318C1FF2400D409D6 /* Views */,
 				9E76E83518C19D2C00D409D6 /* ViewControllers */,
 				9E76E81518C19B0800D409D6 /* EnoAppDelegate.h */,
 				9E76E81618C19B0800D409D6 /* EnoAppDelegate.m */,
@@ -201,20 +205,16 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		9E76E84D18C1B46A00D409D6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		9E76E85318C1FF2400D409D6 /* Libs */ = {
+		9E76E85318C1FF2400D409D6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				9E76E85418C1FF7F00D409D6 /* EnoUIAsyncImageView.h */,
 				9E76E85518C1FF7F00D409D6 /* EnoUIAsyncImageView.m */,
+				9E76E86E18C2DE7F00D409D6 /* EnoPassingTableViewCell.h */,
+				9E76E86F18C2DE7F00D409D6 /* EnoPassingTableViewCell.m */,
+				9E76E87118C2DED700D409D6 /* EnoPassingTableViewCell.xib */,
 			);
-			name = Libs;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		9E76E85C18C25E2800D409D6 /* Models */ = {
@@ -322,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E76E87218C2DED700D409D6 /* EnoPassingTableViewCell.xib in Resources */,
 				9E76E81118C19B0800D409D6 /* InfoPlist.strings in Resources */,
 				9E76E81918C19B0800D409D6 /* Images.xcassets in Resources */,
 				9E76E84218C19EEC00D409D6 /* EnoPassingViewController.xib in Resources */,
@@ -351,6 +352,7 @@
 				9E76E86318C25F8F00D409D6 /* EnoProfileInfo.m in Sources */,
 				9E76E86A18C271C600D409D6 /* EnoConst.m in Sources */,
 				9E76E85618C1FF7F00D409D6 /* EnoUIAsyncImageView.m in Sources */,
+				9E76E87018C2DE7F00D409D6 /* EnoPassingTableViewCell.m in Sources */,
 				9E76E81718C19B0800D409D6 /* EnoAppDelegate.m in Sources */,
 				9E76E86618C260A400D409D6 /* EnoProfileJsonParser.m in Sources */,
 				9E76E84118C19EEC00D409D6 /* EnoPassingViewController.m in Sources */,
