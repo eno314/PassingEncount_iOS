@@ -25,10 +25,8 @@
                                                initWithRootViewController:passingVC];
         
         UIViewController       *myProfileVC   = [[EnoMyProfileViewController alloc] init];
-        UINavigationController *myProfileNavi = [[UINavigationController alloc]
-                                                 initWithRootViewController:myProfileVC];
         
-        self.viewControllers = @[ passingNavi, myProfileNavi ];
+        self.viewControllers = @[ passingNavi, myProfileVC ];
     }
     
     return self;

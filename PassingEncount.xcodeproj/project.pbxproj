@@ -24,6 +24,13 @@
 		9E76E84218C19EEC00D409D6 /* EnoPassingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E76E84018C19EEC00D409D6 /* EnoPassingViewController.xib */; };
 		9E76E84618C1A0A400D409D6 /* EnoMyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E84418C1A0A400D409D6 /* EnoMyProfileViewController.m */; };
 		9E76E84718C1A0A400D409D6 /* EnoMyProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E76E84518C1A0A400D409D6 /* EnoMyProfileViewController.xib */; };
+		9E76E85618C1FF7F00D409D6 /* EnoUIAsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E85518C1FF7F00D409D6 /* EnoUIAsyncImageView.m */; };
+		9E76E85A18C247E000D409D6 /* EnoEditIconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E85818C247E000D409D6 /* EnoEditIconViewController.m */; };
+		9E76E85B18C247E000D409D6 /* EnoEditIconViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E76E85918C247E000D409D6 /* EnoEditIconViewController.xib */; };
+		9E76E86318C25F8F00D409D6 /* EnoProfileInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86218C25F8F00D409D6 /* EnoProfileInfo.m */; };
+		9E76E86618C260A400D409D6 /* EnoProfileJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86518C260A400D409D6 /* EnoProfileJsonParser.m */; };
+		9E76E86A18C271C600D409D6 /* EnoConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86918C271C600D409D6 /* EnoConst.m */; };
+		9E76E86D18C2785C00D409D6 /* EnoNSUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86C18C2785C00D409D6 /* EnoNSUserDefaults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +68,19 @@
 		9E76E84318C1A0A400D409D6 /* EnoMyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoMyProfileViewController.h; sourceTree = "<group>"; };
 		9E76E84418C1A0A400D409D6 /* EnoMyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoMyProfileViewController.m; sourceTree = "<group>"; };
 		9E76E84518C1A0A400D409D6 /* EnoMyProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnoMyProfileViewController.xib; sourceTree = "<group>"; };
+		9E76E85418C1FF7F00D409D6 /* EnoUIAsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoUIAsyncImageView.h; sourceTree = "<group>"; };
+		9E76E85518C1FF7F00D409D6 /* EnoUIAsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoUIAsyncImageView.m; sourceTree = "<group>"; };
+		9E76E85718C247E000D409D6 /* EnoEditIconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoEditIconViewController.h; sourceTree = "<group>"; };
+		9E76E85818C247E000D409D6 /* EnoEditIconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoEditIconViewController.m; sourceTree = "<group>"; };
+		9E76E85918C247E000D409D6 /* EnoEditIconViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnoEditIconViewController.xib; sourceTree = "<group>"; };
+		9E76E86118C25F8F00D409D6 /* EnoProfileInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoProfileInfo.h; sourceTree = "<group>"; };
+		9E76E86218C25F8F00D409D6 /* EnoProfileInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoProfileInfo.m; sourceTree = "<group>"; };
+		9E76E86418C260A400D409D6 /* EnoProfileJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoProfileJsonParser.h; sourceTree = "<group>"; };
+		9E76E86518C260A400D409D6 /* EnoProfileJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoProfileJsonParser.m; sourceTree = "<group>"; };
+		9E76E86818C271C600D409D6 /* EnoConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoConst.h; sourceTree = "<group>"; };
+		9E76E86918C271C600D409D6 /* EnoConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoConst.m; sourceTree = "<group>"; };
+		9E76E86B18C2785C00D409D6 /* EnoNSUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoNSUserDefaults.h; sourceTree = "<group>"; };
+		9E76E86C18C2785C00D409D6 /* EnoNSUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoNSUserDefaults.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +140,12 @@
 		9E76E80C18C19B0800D409D6 /* PassingEncount */ = {
 			isa = PBXGroup;
 			children = (
-				9E76E83518C19D2C00D409D6 /* VIewControllers */,
+				9E76E86718C2718B00D409D6 /* Utils */,
+				9E76E85D18C25F4200D409D6 /* Parsers */,
+				9E76E85C18C25E2800D409D6 /* Models */,
+				9E76E85318C1FF2400D409D6 /* Libs */,
+				9E76E84D18C1B46A00D409D6 /* Views */,
+				9E76E83518C19D2C00D409D6 /* ViewControllers */,
 				9E76E81518C19B0800D409D6 /* EnoAppDelegate.h */,
 				9E76E81618C19B0800D409D6 /* EnoAppDelegate.m */,
 				9E76E81818C19B0800D409D6 /* Images.xcassets */,
@@ -158,7 +183,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9E76E83518C19D2C00D409D6 /* VIewControllers */ = {
+		9E76E83518C19D2C00D409D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				9E76E83B18C19DCF00D409D6 /* EnoTabBarController.h */,
@@ -169,8 +194,56 @@
 				9E76E84318C1A0A400D409D6 /* EnoMyProfileViewController.h */,
 				9E76E84418C1A0A400D409D6 /* EnoMyProfileViewController.m */,
 				9E76E84518C1A0A400D409D6 /* EnoMyProfileViewController.xib */,
+				9E76E85718C247E000D409D6 /* EnoEditIconViewController.h */,
+				9E76E85818C247E000D409D6 /* EnoEditIconViewController.m */,
+				9E76E85918C247E000D409D6 /* EnoEditIconViewController.xib */,
 			);
-			name = VIewControllers;
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9E76E84D18C1B46A00D409D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9E76E85318C1FF2400D409D6 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				9E76E85418C1FF7F00D409D6 /* EnoUIAsyncImageView.h */,
+				9E76E85518C1FF7F00D409D6 /* EnoUIAsyncImageView.m */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		9E76E85C18C25E2800D409D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E76E86B18C2785C00D409D6 /* EnoNSUserDefaults.h */,
+				9E76E86C18C2785C00D409D6 /* EnoNSUserDefaults.m */,
+				9E76E86118C25F8F00D409D6 /* EnoProfileInfo.h */,
+				9E76E86218C25F8F00D409D6 /* EnoProfileInfo.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9E76E85D18C25F4200D409D6 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				9E76E86418C260A400D409D6 /* EnoProfileJsonParser.h */,
+				9E76E86518C260A400D409D6 /* EnoProfileJsonParser.m */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		9E76E86718C2718B00D409D6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9E76E86818C271C600D409D6 /* EnoConst.h */,
+				9E76E86918C271C600D409D6 /* EnoConst.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +326,7 @@
 				9E76E81918C19B0800D409D6 /* Images.xcassets in Resources */,
 				9E76E84218C19EEC00D409D6 /* EnoPassingViewController.xib in Resources */,
 				9E76E84718C1A0A400D409D6 /* EnoMyProfileViewController.xib in Resources */,
+				9E76E85B18C247E000D409D6 /* EnoEditIconViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +348,14 @@
 				9E76E84618C1A0A400D409D6 /* EnoMyProfileViewController.m in Sources */,
 				9E76E81318C19B0800D409D6 /* main.m in Sources */,
 				9E76E83D18C19DCF00D409D6 /* EnoTabBarController.m in Sources */,
+				9E76E86318C25F8F00D409D6 /* EnoProfileInfo.m in Sources */,
+				9E76E86A18C271C600D409D6 /* EnoConst.m in Sources */,
+				9E76E85618C1FF7F00D409D6 /* EnoUIAsyncImageView.m in Sources */,
 				9E76E81718C19B0800D409D6 /* EnoAppDelegate.m in Sources */,
+				9E76E86618C260A400D409D6 /* EnoProfileJsonParser.m in Sources */,
 				9E76E84118C19EEC00D409D6 /* EnoPassingViewController.m in Sources */,
+				9E76E86D18C2785C00D409D6 /* EnoNSUserDefaults.m in Sources */,
+				9E76E85A18C247E000D409D6 /* EnoEditIconViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +556,7 @@
 				9E76E83118C19B0800D409D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E76E83218C19B0800D409D6 /* Build configuration list for PBXNativeTarget "PassingEncountTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +565,7 @@
 				9E76E83418C19B0800D409D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

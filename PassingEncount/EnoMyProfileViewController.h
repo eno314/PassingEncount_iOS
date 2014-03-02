@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EnoUIAsyncImageView.h"
+#import "EnoEditIconViewController.h"
+#import "EnoProfileInfo.h"
+#import "EnoNSUserDefaults.h"
 
-@interface EnoMyProfileViewController : UIViewController
+@interface EnoMyProfileViewController : UIViewController<
+    UITextFieldDelegate,
+    UIGestureRecognizerDelegate, // 画面外のタップを取るために使う
+    EnoEditIconViewControllerDelegate
+>
 
 @end
