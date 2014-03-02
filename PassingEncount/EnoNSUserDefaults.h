@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "EnoProfileInfo.h"
-#import "EnoPassingInfo.h"
 
 @interface EnoNSUserDefaults : NSObject
 
@@ -26,9 +25,6 @@
 
 /** すれ違い一覧のセッター */
 + (void)setPassings:(NSArray *)passings;
-
-/** すれ違いを追加 */
-+ (void)addPassings:(EnoPassingInfo *)passing;
 
 /** すれ違い一覧のゲッター */
 + (NSArray *)getPassings;

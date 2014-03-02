@@ -18,4 +18,6 @@
     EnoEditIconViewControllerDelegate
 >
 
+- (id)initForOthers:(EnoProfileInfo *)profile;
+
 @end

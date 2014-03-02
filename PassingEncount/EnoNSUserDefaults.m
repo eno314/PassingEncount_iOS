@@ -29,7 +29,7 @@
 + (void)setProfileJsonObjWithModel:(EnoProfileInfo *)profile
 {
     NSDictionary *jsonObj = @{ @"name"         : profile.name,
-                               @"iconUrlString": profile.iconUrlsitring,
+                               @"iconUrlString": profile.iconUrlstring,
                                @"message"      : profile.message };
     
     [self setProfileJsonObj:jsonObj];
@@ -44,13 +44,13 @@
     if ( jsonObj ) {
         // プリファレンスからjsonを取ってくる
         profile.name           = [jsonObj objectForKey:@"name"];
-        profile.iconUrlsitring = [jsonObj objectForKey:@"iconUrlString"];
+        profile.iconUrlstring = [jsonObj objectForKey:@"iconUrlString"];
         profile.message        = [jsonObj objectForKey:@"message"];
     }
     else {
         
         profile.name           = @"ほげほげ";
-        profile.iconUrlsitring = ICON_DEFAULT;
+        profile.iconUrlstring = ICON_DEFAULT;
         profile.message        = @"ふがふが";
     }
     

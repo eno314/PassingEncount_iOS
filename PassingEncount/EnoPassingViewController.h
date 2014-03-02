@@ -14,7 +14,7 @@
 #import "EnoUIAsyncImageView.h"
 #import "EnoPassingTableViewCell.h"
 #import "EnoConst.h"
-#import "EnoPassingInfo.h"
+#import "EnoMyProfileViewController.h"
 
 @interface EnoPassingViewController : UIViewController<
     UITableViewDataSource,

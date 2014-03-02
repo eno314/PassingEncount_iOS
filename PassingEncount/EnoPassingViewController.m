@@ -101,7 +101,7 @@
         cell.messageLabel.text      = profile.message;
         cell.timeLabel.text         = nil;
         
-        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:profile.iconUrlsitring]];
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:profile.iconUrlstring]];
         cell.iconImageView.image = [UIImage imageWithData:data];
     }
     else {
@@ -144,6 +144,8 @@
     }
 }
 
+# pragma mark - UITableViewDelegate
+
 /**
  * セルの高さ
  */
@@ -152,7 +154,34 @@
     return 80;
 }
 
-# pragma mark - UITableViewDelegate
+/**
+ * セルタップ時、すれ違った人だったら詳細プロフィールページへ
+ */
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog( @"tableView didSelect" );
+    
+    [self.tableview deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if ( indexPath.section == 0 ) {
+        
+        return;
+    }
+    
+    NSDictionary *passing  = [self.passings objectAtIndex:indexPath.row];
+    
+    EnoProfileInfo *profile = [[EnoProfileInfo alloc] init];
+    profile.userid          = [passing objectForKey:@"userid"];
+    profile.name            = [passing objectForKey:@"name"];
+    profile.iconUrlstring   = [passing objectForKey:@"iconUrlstring"];
+    profile.message         = [passing objectForKey:@"message"];
+    profile.passinged       = [passing objectForKey:@"passinged"];
+    
+    EnoMyProfileViewController *profileVC = [[EnoMyProfileViewController alloc] initForOthers:profile];
+    [self.navigationController pushViewController:profileVC animated:YES];
+    
+    NSLog( @"%@", passing );
+}
 
 # pragma mark - CBCentralManagerDelegate
 

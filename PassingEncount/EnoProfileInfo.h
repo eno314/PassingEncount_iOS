@@ -10,8 +10,10 @@
 
 @interface EnoProfileInfo : NSObject
 
+@property (nonatomic, strong) NSString *userid;
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *iconUrlsitring;
+@property (nonatomic, strong) NSString *iconUrlstring;
 @property (nonatomic, strong) NSString *message;
+@property (nonatomic, strong) NSDate   *passinged;
 
 @end

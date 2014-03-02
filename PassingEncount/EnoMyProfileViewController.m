@@ -19,6 +19,8 @@
 @property (nonatomic, strong) EnoUIAsyncImageView    *iconImageView;
 @property (nonatomic, strong) EnoProfileInfo         *profile;
 
+@property (nonatomic) BOOL isMine;
+
 @end
 
 @implementation EnoMyProfileViewController
@@ -29,12 +31,29 @@
     
     if ( self ) {
         
-        // hogehoge
         self.title = @"マイプロフ";
         
         self.currentTextField = nil;
         
         self.profile = [EnoNSUserDefaults getProfileModel];
+        
+        self.isMine = YES;
+    }
+    
+    return self;
+}
+
+- (id)initForOthers:(EnoProfileInfo *)profile
+{
+    self = [super initWithNibName:@"EnoMyProfileViewController" bundle:nil];
+    
+    if ( self ) {
+        
+        self.title = @"プロフィール";
+        
+        self.profile = profile;
+        
+        self.isMine = NO;
     }
     
     return self;
@@ -59,9 +78,16 @@
     
     self.iconImageView = [[EnoUIAsyncImageView alloc]
                           initWithFrame:self.iconArea.bounds
-                          withUrlstring:self.profile.iconUrlsitring];
+                          withUrlstring:self.profile.iconUrlstring];
     [self.iconImageView startLoadImage];
     [self.iconArea addSubview:self.iconImageView];
+    
+    if ( ! self.isMine ) {
+        
+        self.nameTextField.enabled       = NO;
+        self.messageTextField.enabled    = NO;
+        self.view.userInteractionEnabled = NO;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -185,7 +211,7 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
     
-    self.profile.iconUrlsitring = urlstring;
+    self.profile.iconUrlstring = urlstring;
     
     // 画像の再読み込み
     self.iconImageView.imageUrl = [NSURL URLWithString:urlstring];
