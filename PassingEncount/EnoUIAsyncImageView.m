@@ -61,7 +61,7 @@
     [self.conn cancel];
     self.conn = nil;
     
-    if ( self.image == nil ) {
+    if ( ! self.image ) {
         
         [self p_setLoadErrorImage];
     }
@@ -77,7 +77,7 @@
     UIActivityIndicatorView *iv = (UIActivityIndicatorView *)
     [self viewWithTag:VIEW_TAG];
     
-    if ( iv == nil ) {
+    if ( ! iv ) {
         // 読み込み中画像のセット
         iv = [[UIActivityIndicatorView alloc]
               initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];

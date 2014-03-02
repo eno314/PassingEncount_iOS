@@ -9,6 +9,9 @@
 #import "EnoNSUserDefaults.h"
 
 #define KEY_PROFILE  @"NSUserDefaultsKeyProfile"
+#define KEY_PASSINGS @"NSUserDefaultsKeyPassings"
+
+
 #define ICON_DEFAULT @"https://abs.twimg.com/sticky/default_profile_images/default_profile_2_bigger.png"
 
 @implementation EnoNSUserDefaults
@@ -52,6 +55,57 @@
     }
     
     return profile;
+}
+
++ (void)setPassings:(NSArray *)passings
+{
+    [[NSUserDefaults standardUserDefaults] setObject:passings forKey:KEY_PASSINGS];
+}
+
++ (void)addPassings:(NSDictionary *)jsonObj
+{
+    NSArray *passings = [self getPassings];
+    
+    if ( passings ) {
+    
+        NSMutableArray *newPassings = [passings mutableCopy];
+        [newPassings insertObject:jsonObj atIndex:0];
+        [self setPassings:[newPassings copy]];
+    }
+    else {
+        
+        [self setPassings:@[jsonObj]];
+    }
+}
+
++ (NSArray *)getPassings
+{
+    return [[NSUserDefaults standardUserDefaults] objectForKey:KEY_PASSINGS];
+}
+
++ (void)addPassingsWithJsondata:(NSData *)jsondata
+{
+    NSMutableDictionary *jsonObj = [NSJSONSerialization
+                                    JSONObjectWithData:jsondata
+                                    options:NSJSONReadingMutableContainers
+                                    error:nil];
+    
+    if ( jsonObj ) {
+        /*
+        EnoPassingInfo *passing = [[EnoPassingInfo alloc] init];
+        
+        passing.userid        = [jsonObj objectForKey:@"userid"];
+        passing.name          = [jsonObj objectForKey:@"name"];
+        passing.iconUrlstring = [jsonObj objectForKey:@"iconUrlstring"];
+        passing.message       = [jsonObj objectForKey:@"message"];
+        
+        // すれ違った時間は現在時間を突っ込む
+        passing.passinged     = [NSDate date];
+         */
+        [jsonObj setObject:[NSDate date] forKey:@"passinged"];
+        
+        [self addPassings:[jsonObj copy]];
+    }
 }
 
 @end

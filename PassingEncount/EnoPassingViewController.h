@@ -7,14 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
+
 #import "EnoNSUserDefaults.h"
 #import "EnoProfileInfo.h"
 #import "EnoUIAsyncImageView.h"
 #import "EnoPassingTableViewCell.h"
+#import "EnoConst.h"
+#import "EnoPassingInfo.h"
 
 @interface EnoPassingViewController : UIViewController<
     UITableViewDataSource,
-    UITableViewDelegate
+    UITableViewDelegate,
+    CBCentralManagerDelegate,
+    CBPeripheralDelegate
 >
 
 @end

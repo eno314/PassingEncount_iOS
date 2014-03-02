@@ -102,7 +102,7 @@
 {
     if ( gestureRecognizer == self.singleTap ) {
         
-        if ( self.currentTextField == nil ) {
+        if ( ! self.currentTextField ) {
             
             return NO;
         }

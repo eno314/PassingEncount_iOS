@@ -62,17 +62,17 @@
     
     if ( self.iconImageView == nil ) {
         
+        self.iconImageView.imageUrl = [NSURL URLWithString:textField.text];
+        [self.iconImageView reloadImage];
+    }
+    else {
+        
         self.iconImageView = [[EnoUIAsyncImageView alloc]
                               initWithFrame:self.iconArea.bounds
                               withUrlstring:textField.text];
         [self.iconImageView startLoadImage];
         
         [self.iconArea addSubview:self.iconImageView];
-    }
-    else {
-        
-        self.iconImageView.imageUrl = [NSURL URLWithString:textField.text];
-        [self.iconImageView reloadImage];
     }
     
     return YES;

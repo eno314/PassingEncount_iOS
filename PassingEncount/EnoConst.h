@@ -13,4 +13,10 @@
 /** プロフィールのプリファレンスキー */
 + (NSString *)NSUserDefaultsKeyProfile;
 
+/** すれ違い通信用のサービスUUID */
++ (NSString *)serviceUUID;
+
+/** すれ違い通信サービスのプロフィール特性のUUID*/
++ (NSString *)characteristicUUID;
+
 @end

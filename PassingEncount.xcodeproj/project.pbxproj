@@ -33,6 +33,8 @@
 		9E76E86D18C2785C00D409D6 /* EnoNSUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86C18C2785C00D409D6 /* EnoNSUserDefaults.m */; };
 		9E76E87018C2DE7F00D409D6 /* EnoPassingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86F18C2DE7F00D409D6 /* EnoPassingTableViewCell.m */; };
 		9E76E87218C2DED700D409D6 /* EnoPassingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E76E87118C2DED700D409D6 /* EnoPassingTableViewCell.xib */; };
+		9E76E87518C302A500D409D6 /* EnoPassingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E87418C302A500D409D6 /* EnoPassingInfo.m */; };
+		9E76E87718C3078700D409D6 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76E87618C3078700D409D6 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,9 @@
 		9E76E86E18C2DE7F00D409D6 /* EnoPassingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoPassingTableViewCell.h; sourceTree = "<group>"; };
 		9E76E86F18C2DE7F00D409D6 /* EnoPassingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoPassingTableViewCell.m; sourceTree = "<group>"; };
 		9E76E87118C2DED700D409D6 /* EnoPassingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnoPassingTableViewCell.xib; sourceTree = "<group>"; };
+		9E76E87318C302A500D409D6 /* EnoPassingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoPassingInfo.h; sourceTree = "<group>"; };
+		9E76E87418C302A500D409D6 /* EnoPassingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoPassingInfo.m; sourceTree = "<group>"; };
+		9E76E87618C3078700D409D6 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E76E87718C3078700D409D6 /* CoreBluetooth.framework in Frameworks */,
 				9E76E80918C19B0700D409D6 /* CoreGraphics.framework in Frameworks */,
 				9E76E80B18C19B0800D409D6 /* UIKit.framework in Frameworks */,
 				9E76E80718C19B0700D409D6 /* Foundation.framework in Frameworks */,
@@ -134,6 +140,7 @@
 		9E76E80518C19B0700D409D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E76E87618C3078700D409D6 /* CoreBluetooth.framework */,
 				9E76E80618C19B0700D409D6 /* Foundation.framework */,
 				9E76E80818C19B0700D409D6 /* CoreGraphics.framework */,
 				9E76E80A18C19B0800D409D6 /* UIKit.framework */,
@@ -224,6 +231,8 @@
 				9E76E86C18C2785C00D409D6 /* EnoNSUserDefaults.m */,
 				9E76E86118C25F8F00D409D6 /* EnoProfileInfo.h */,
 				9E76E86218C25F8F00D409D6 /* EnoProfileInfo.m */,
+				9E76E87318C302A500D409D6 /* EnoPassingInfo.h */,
+				9E76E87418C302A500D409D6 /* EnoPassingInfo.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -346,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E76E87518C302A500D409D6 /* EnoPassingInfo.m in Sources */,
 				9E76E84618C1A0A400D409D6 /* EnoMyProfileViewController.m in Sources */,
 				9E76E81318C19B0800D409D6 /* main.m in Sources */,
 				9E76E83D18C19DCF00D409D6 /* EnoTabBarController.m in Sources */,
