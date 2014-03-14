@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9E36DD6318D1EFB10040D22C /* EnoLocalNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E36DD6218D1EFB10040D22C /* EnoLocalNotificationManager.m */; };
 		9E36DD6618D330CE0040D22C /* EnoPassingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E36DD6518D330CE0040D22C /* EnoPassingInfo.m */; };
+		9E36DD6918D337220040D22C /* EnoNSUserDefaultsProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E36DD6818D337220040D22C /* EnoNSUserDefaultsProfile.m */; };
+		9E36DD6C18D337980040D22C /* EnoNSUserDefaultsPassing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E36DD6B18D337980040D22C /* EnoNSUserDefaultsPassing.m */; };
 		9E76E80718C19B0700D409D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76E80618C19B0700D409D6 /* Foundation.framework */; };
 		9E76E80918C19B0700D409D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76E80818C19B0700D409D6 /* CoreGraphics.framework */; };
 		9E76E80B18C19B0800D409D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76E80A18C19B0800D409D6 /* UIKit.framework */; };
@@ -32,7 +34,6 @@
 		9E76E86318C25F8F00D409D6 /* EnoProfileInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86218C25F8F00D409D6 /* EnoProfileInfo.m */; };
 		9E76E86618C260A400D409D6 /* EnoProfileJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86518C260A400D409D6 /* EnoProfileJsonParser.m */; };
 		9E76E86A18C271C600D409D6 /* EnoConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86918C271C600D409D6 /* EnoConst.m */; };
-		9E76E86D18C2785C00D409D6 /* EnoNSUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86C18C2785C00D409D6 /* EnoNSUserDefaults.m */; };
 		9E76E87018C2DE7F00D409D6 /* EnoPassingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86F18C2DE7F00D409D6 /* EnoPassingTableViewCell.m */; };
 		9E76E87218C2DED700D409D6 /* EnoPassingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E76E87118C2DED700D409D6 /* EnoPassingTableViewCell.xib */; };
 		9E76E87718C3078700D409D6 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76E87618C3078700D409D6 /* CoreBluetooth.framework */; };
@@ -55,6 +56,10 @@
 		9E36DD6218D1EFB10040D22C /* EnoLocalNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoLocalNotificationManager.m; sourceTree = "<group>"; };
 		9E36DD6418D330CE0040D22C /* EnoPassingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoPassingInfo.h; sourceTree = "<group>"; };
 		9E36DD6518D330CE0040D22C /* EnoPassingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoPassingInfo.m; sourceTree = "<group>"; };
+		9E36DD6718D337220040D22C /* EnoNSUserDefaultsProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoNSUserDefaultsProfile.h; sourceTree = "<group>"; };
+		9E36DD6818D337220040D22C /* EnoNSUserDefaultsProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoNSUserDefaultsProfile.m; sourceTree = "<group>"; };
+		9E36DD6A18D337980040D22C /* EnoNSUserDefaultsPassing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoNSUserDefaultsPassing.h; sourceTree = "<group>"; };
+		9E36DD6B18D337980040D22C /* EnoNSUserDefaultsPassing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoNSUserDefaultsPassing.m; sourceTree = "<group>"; };
 		9E76E80318C19B0700D409D6 /* PassingEncount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassingEncount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E76E80618C19B0700D409D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9E76E80818C19B0700D409D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,8 +95,6 @@
 		9E76E86518C260A400D409D6 /* EnoProfileJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoProfileJsonParser.m; sourceTree = "<group>"; };
 		9E76E86818C271C600D409D6 /* EnoConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoConst.h; sourceTree = "<group>"; };
 		9E76E86918C271C600D409D6 /* EnoConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoConst.m; sourceTree = "<group>"; };
-		9E76E86B18C2785C00D409D6 /* EnoNSUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoNSUserDefaults.h; sourceTree = "<group>"; };
-		9E76E86C18C2785C00D409D6 /* EnoNSUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoNSUserDefaults.m; sourceTree = "<group>"; };
 		9E76E86E18C2DE7F00D409D6 /* EnoPassingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoPassingTableViewCell.h; sourceTree = "<group>"; };
 		9E76E86F18C2DE7F00D409D6 /* EnoPassingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoPassingTableViewCell.m; sourceTree = "<group>"; };
 		9E76E87118C2DED700D409D6 /* EnoPassingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnoPassingTableViewCell.xib; sourceTree = "<group>"; };
@@ -237,12 +240,14 @@
 		9E76E85C18C25E2800D409D6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9E76E86B18C2785C00D409D6 /* EnoNSUserDefaults.h */,
-				9E76E86C18C2785C00D409D6 /* EnoNSUserDefaults.m */,
 				9E76E86118C25F8F00D409D6 /* EnoProfileInfo.h */,
 				9E76E86218C25F8F00D409D6 /* EnoProfileInfo.m */,
 				9E36DD6418D330CE0040D22C /* EnoPassingInfo.h */,
 				9E36DD6518D330CE0040D22C /* EnoPassingInfo.m */,
+				9E36DD6718D337220040D22C /* EnoNSUserDefaultsProfile.h */,
+				9E36DD6818D337220040D22C /* EnoNSUserDefaultsProfile.m */,
+				9E36DD6A18D337980040D22C /* EnoNSUserDefaultsPassing.h */,
+				9E36DD6B18D337980040D22C /* EnoNSUserDefaultsPassing.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E36DD6918D337220040D22C /* EnoNSUserDefaultsProfile.m in Sources */,
 				9E76E84618C1A0A400D409D6 /* EnoMyProfileViewController.m in Sources */,
 				9E76E81318C19B0800D409D6 /* main.m in Sources */,
 				9E76E83D18C19DCF00D409D6 /* EnoTabBarController.m in Sources */,
@@ -382,8 +388,8 @@
 				9EA9134518CDFC4800FB1A92 /* EnoIBeaconReceiver.m in Sources */,
 				9E76E84118C19EEC00D409D6 /* EnoPassingViewController.m in Sources */,
 				9E36DD6618D330CE0040D22C /* EnoPassingInfo.m in Sources */,
-				9E76E86D18C2785C00D409D6 /* EnoNSUserDefaults.m in Sources */,
 				9E76E85A18C247E000D409D6 /* EnoEditIconViewController.m in Sources */,
+				9E36DD6C18D337980040D22C /* EnoNSUserDefaultsPassing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,15 +1,15 @@
 //
-//  EnoNSUserDefaults.h
+//  EnoNSUserDefaultsProfile.h
 //  PassingEncount
 //
-//  Created by hiroto kitamur on 2014/03/02.
+//  Created by hiroto kitamur on 2014/03/14.
 //  Copyright (c) 2014年 Hiroto Kitamur. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "EnoProfileInfo.h"
 
-@interface EnoNSUserDefaults : NSObject
+@interface EnoNSUserDefaultsProfile : NSObject
 
 /** プロフィールのセッター */
 + (void)setProfileJsonObj:(NSDictionary *)jsonObj;
@@ -22,16 +22,5 @@
 
 /**  プロフィールモデルのゲッター */
 + (EnoProfileInfo *)getProfileModel;
-
-/** すれ違い一覧のセッター */
-+ (void)setPassings:(NSArray *)passings;
-
-/** すれ違い一覧のゲッター */
-+ (NSArray *)getPassings;
-
-/** jsondataからセットする */
-+ (void)addPassingsWithJsondata:(NSData *)jsondata;
-
-
 
 @end

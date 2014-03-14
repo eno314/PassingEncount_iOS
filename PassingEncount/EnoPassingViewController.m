@@ -27,7 +27,7 @@
         // hogehoge
         self.title = @"すれ違い";
         
-        self.passings = [EnoNSUserDefaults getPassings];
+        self.passings = [EnoNSUserDefaultsPassing getPassings];
     }
     
     return self;
@@ -60,7 +60,7 @@
 
 - (UITableViewCell *)p_makeMyProfileCell:(EnoPassingTableViewCell *)cell
 {
-    EnoProfileInfo *profile = [EnoNSUserDefaults getProfileModel];
+    EnoProfileInfo *profile = [EnoNSUserDefaultsProfile getProfileModel];
     cell.nameLabel.text     = profile.name;
     cell.messageLabel.text  = profile.message;
     cell.timeLabel.text     = nil;

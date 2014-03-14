@@ -10,7 +10,7 @@
 #import "EnoUIAsyncImageView.h"
 #import "EnoEditIconViewController.h"
 #import "EnoProfileInfo.h"
-#import "EnoNSUserDefaults.h"
+#import "EnoNSUserDefaultsProfile.h"
 
 @interface EnoMyProfileViewController : UIViewController<
     UITextFieldDelegate,

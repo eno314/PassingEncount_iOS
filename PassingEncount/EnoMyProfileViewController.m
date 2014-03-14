@@ -35,7 +35,7 @@
         
         self.currentTextField = nil;
         
-        self.profile = [EnoNSUserDefaults getProfileModel];
+        self.profile = [EnoNSUserDefaultsProfile getProfileModel];
         
         self.isMine = YES;
     }
@@ -195,7 +195,7 @@
         self.profile.message = self.messageTextField.text;
     }
     
-    [EnoNSUserDefaults setProfileJsonObjWithModel:self.profile];
+    [EnoNSUserDefaultsProfile setProfileJsonObjWithModel:self.profile];
     
     [textField resignFirstResponder];
     
@@ -217,7 +217,7 @@
     self.iconImageView.imageUrl = [NSURL URLWithString:urlstring];
     [self.iconImageView reloadImage];
     
-    [EnoNSUserDefaults setProfileJsonObjWithModel:self.profile];
+    [EnoNSUserDefaultsProfile setProfileJsonObjWithModel:self.profile];
 }
 
 /**

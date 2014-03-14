@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-#import "EnoNSUserDefaults.h"
+#import "EnoNSUserDefaultsPassing.h"
+#import "EnoNSUserDefaultsProfile.h"
 #import "EnoProfileInfo.h"
 #import "EnoUIAsyncImageView.h"
 #import "EnoPassingTableViewCell.h"
