@@ -18,9 +18,7 @@
 
 @interface EnoPassingViewController : UIViewController<
     UITableViewDataSource,
-    UITableViewDelegate,
-    CBCentralManagerDelegate,
-    CBPeripheralDelegate
+    UITableViewDelegate
 >
 
 @end

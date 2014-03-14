@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E36DD6318D1EFB10040D22C /* EnoLocalNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E36DD6218D1EFB10040D22C /* EnoLocalNotificationManager.m */; };
+		9E36DD6618D330CE0040D22C /* EnoPassingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E36DD6518D330CE0040D22C /* EnoPassingInfo.m */; };
 		9E76E80718C19B0700D409D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76E80618C19B0700D409D6 /* Foundation.framework */; };
 		9E76E80918C19B0700D409D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76E80818C19B0700D409D6 /* CoreGraphics.framework */; };
 		9E76E80B18C19B0800D409D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76E80A18C19B0800D409D6 /* UIKit.framework */; };
@@ -34,6 +36,8 @@
 		9E76E87018C2DE7F00D409D6 /* EnoPassingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76E86F18C2DE7F00D409D6 /* EnoPassingTableViewCell.m */; };
 		9E76E87218C2DED700D409D6 /* EnoPassingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E76E87118C2DED700D409D6 /* EnoPassingTableViewCell.xib */; };
 		9E76E87718C3078700D409D6 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76E87618C3078700D409D6 /* CoreBluetooth.framework */; };
+		9EA9134018CC4EF300FB1A92 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA9133F18CC4EF300FB1A92 /* CoreLocation.framework */; };
+		9EA9134518CDFC4800FB1A92 /* EnoIBeaconReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA9134418CDFC4800FB1A92 /* EnoIBeaconReceiver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E36DD6118D1EFB10040D22C /* EnoLocalNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoLocalNotificationManager.h; sourceTree = "<group>"; };
+		9E36DD6218D1EFB10040D22C /* EnoLocalNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoLocalNotificationManager.m; sourceTree = "<group>"; };
+		9E36DD6418D330CE0040D22C /* EnoPassingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoPassingInfo.h; sourceTree = "<group>"; };
+		9E36DD6518D330CE0040D22C /* EnoPassingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoPassingInfo.m; sourceTree = "<group>"; };
 		9E76E80318C19B0700D409D6 /* PassingEncount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassingEncount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E76E80618C19B0700D409D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9E76E80818C19B0700D409D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,6 +96,9 @@
 		9E76E86F18C2DE7F00D409D6 /* EnoPassingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoPassingTableViewCell.m; sourceTree = "<group>"; };
 		9E76E87118C2DED700D409D6 /* EnoPassingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnoPassingTableViewCell.xib; sourceTree = "<group>"; };
 		9E76E87618C3078700D409D6 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		9EA9133F18CC4EF300FB1A92 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9EA9134318CDFC4800FB1A92 /* EnoIBeaconReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnoIBeaconReceiver.h; sourceTree = "<group>"; };
+		9EA9134418CDFC4800FB1A92 /* EnoIBeaconReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnoIBeaconReceiver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA9134018CC4EF300FB1A92 /* CoreLocation.framework in Frameworks */,
 				9E76E87718C3078700D409D6 /* CoreBluetooth.framework in Frameworks */,
 				9E76E80918C19B0700D409D6 /* CoreGraphics.framework in Frameworks */,
 				9E76E80B18C19B0800D409D6 /* UIKit.framework in Frameworks */,
@@ -137,6 +149,7 @@
 		9E76E80518C19B0700D409D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9EA9133F18CC4EF300FB1A92 /* CoreLocation.framework */,
 				9E76E87618C3078700D409D6 /* CoreBluetooth.framework */,
 				9E76E80618C19B0700D409D6 /* Foundation.framework */,
 				9E76E80818C19B0700D409D6 /* CoreGraphics.framework */,
@@ -228,6 +241,8 @@
 				9E76E86C18C2785C00D409D6 /* EnoNSUserDefaults.m */,
 				9E76E86118C25F8F00D409D6 /* EnoProfileInfo.h */,
 				9E76E86218C25F8F00D409D6 /* EnoProfileInfo.m */,
+				9E36DD6418D330CE0040D22C /* EnoPassingInfo.h */,
+				9E36DD6518D330CE0040D22C /* EnoPassingInfo.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -246,6 +261,10 @@
 			children = (
 				9E76E86818C271C600D409D6 /* EnoConst.h */,
 				9E76E86918C271C600D409D6 /* EnoConst.m */,
+				9EA9134318CDFC4800FB1A92 /* EnoIBeaconReceiver.h */,
+				9EA9134418CDFC4800FB1A92 /* EnoIBeaconReceiver.m */,
+				9E36DD6118D1EFB10040D22C /* EnoLocalNotificationManager.h */,
+				9E36DD6218D1EFB10040D22C /* EnoLocalNotificationManager.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -295,7 +314,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Eno;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Hiroto Kitamur";
 				TargetAttributes = {
 					9E76E81D18C19B0800D409D6 = {
@@ -357,9 +376,12 @@
 				9E76E86A18C271C600D409D6 /* EnoConst.m in Sources */,
 				9E76E85618C1FF7F00D409D6 /* EnoUIAsyncImageView.m in Sources */,
 				9E76E87018C2DE7F00D409D6 /* EnoPassingTableViewCell.m in Sources */,
+				9E36DD6318D1EFB10040D22C /* EnoLocalNotificationManager.m in Sources */,
 				9E76E81718C19B0800D409D6 /* EnoAppDelegate.m in Sources */,
 				9E76E86618C260A400D409D6 /* EnoProfileJsonParser.m in Sources */,
+				9EA9134518CDFC4800FB1A92 /* EnoIBeaconReceiver.m in Sources */,
 				9E76E84118C19EEC00D409D6 /* EnoPassingViewController.m in Sources */,
+				9E36DD6618D330CE0040D22C /* EnoPassingInfo.m in Sources */,
 				9E76E86D18C2785C00D409D6 /* EnoNSUserDefaults.m in Sources */,
 				9E76E85A18C247E000D409D6 /* EnoEditIconViewController.m in Sources */,
 			);
@@ -407,7 +429,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -446,7 +467,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -504,7 +524,6 @@
 		9E76E83318C19B0800D409D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PassingEncount.app/PassingEncount";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -527,7 +546,6 @@
 		9E76E83418C19B0800D409D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PassingEncount.app/PassingEncount";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

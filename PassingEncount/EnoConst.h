@@ -19,4 +19,7 @@
 /** すれ違い通信サービスのプロフィール特性のUUID*/
 + (NSString *)characteristicUUID;
 
+/** すれ違い通信iBeaconのidentifer*/
++ (NSString *)serviceIdentifer;
+
 @end

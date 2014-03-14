@@ -21,6 +21,9 @@
     EnoTabBarController *top = [[EnoTabBarController alloc] initWithNibName:nil bundle:nil];
     self.window.rootViewController = top;
     
+    // ibeaconの受信開始
+    [[EnoIBeaconReceiver sharedManager] start];
+    
     return YES;
 }
 

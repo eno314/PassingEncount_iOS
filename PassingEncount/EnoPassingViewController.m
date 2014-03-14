@@ -12,10 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
 
-@property (nonatomic, strong) CBCentralManager *centralManager;
-@property (nonatomic, strong) CBPeripheral     *peripheral;
-@property (nonatomic, strong) NSMutableData    *data;
-
 @property (nonatomic, strong) NSArray *passings;
 
 @end
@@ -47,9 +43,6 @@
     
     self.tableview.dataSource = self;
     self.tableview.delegate   = self;
-    
-    // セントラルマネージャーの起動
-    self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -65,6 +58,35 @@
     [super didReceiveMemoryWarning];
 }
 
+- (UITableViewCell *)p_makeMyProfileCell:(EnoPassingTableViewCell *)cell
+{
+    EnoProfileInfo *profile = [EnoNSUserDefaults getProfileModel];
+    cell.nameLabel.text     = profile.name;
+    cell.messageLabel.text  = profile.message;
+    cell.timeLabel.text     = nil;
+    
+    NSData *data             = [NSData dataWithContentsOfURL:[NSURL URLWithString:profile.iconUrlstring]];
+    cell.iconImageView.image = [UIImage imageWithData:data];
+    
+    return cell;
+}
+
+- (UITableViewCell *)p_makePassingedCell:(EnoPassingTableViewCell *)cell AtRow:(NSInteger)row
+{
+    NSDictionary *passing  = [self.passings objectAtIndex:row];
+    cell.nameLabel.text    = [passing objectForKey:@"name"];
+    cell.messageLabel.text = [passing objectForKey:@"message"];
+    
+    NSDate *passinged   = [passing objectForKey:@"passinged"];
+    cell.timeLabel.text = passinged.description;
+    
+    NSString *imageUrlstring = [passing objectForKey:@"iconUrlstring"];
+    NSData   *imageData      = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrlstring]];
+    cell.iconImageView.image = [UIImage imageWithData:imageData];
+    
+    return cell;
+}
+
 # pragma mark - UITableViewDataSource
 
 /**
@@ -76,15 +98,13 @@
         
         return 1;
     }
-    else {
-        
-        if ( self.passings ) {
+    
+    if ( self.passings ) {
             
-            return [self.passings count];
-        }
-        
-        return 0;
+        return [self.passings count];
     }
+        
+    return 0;
 }
 
 /**
@@ -96,29 +116,10 @@
     
     if ( indexPath.section == 0 ) {
         
-        EnoProfileInfo *profile     = [EnoNSUserDefaults getProfileModel];
-        cell.nameLabel.text         = profile.name;
-        cell.messageLabel.text      = profile.message;
-        cell.timeLabel.text         = nil;
-        
-        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:profile.iconUrlstring]];
-        cell.iconImageView.image = [UIImage imageWithData:data];
-    }
-    else {
-        
-        NSDictionary *passing  = [self.passings objectAtIndex:indexPath.row];
-        cell.nameLabel.text    = [passing objectForKey:@"name"];
-        cell.messageLabel.text = [passing objectForKey:@"message"];
-        
-        NSDate *passinged   = [passing objectForKey:@"passinged"];
-        cell.timeLabel.text = passinged.description;
-        
-        NSString *imageUrlstring = [passing objectForKey:@"iconUrlstring"];
-        NSData   *imageData      = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrlstring]];
-        cell.iconImageView.image = [UIImage imageWithData:imageData];
+        return [self p_makeMyProfileCell:cell];
     }
     
-    return cell;
+    return [self p_makePassingedCell:cell AtRow:indexPath.row];
 }
 
 /**
@@ -181,214 +182,6 @@
     [self.navigationController pushViewController:profileVC animated:YES];
     
     NSLog( @"%@", passing );
-}
-
-# pragma mark - CBCentralManagerDelegate
-
-/**
- * centralManagerが初期化されたり、状態が変化した時
- */
-- (void)centralManagerDidUpdateState:(CBCentralManager *)central
-{
-    NSLog( @"%@", NSStringFromSelector(_cmd) );
-    
-    switch ( central.state ) {
-        case CBCentralManagerStatePoweredOn:
-            NSLog( @"%@", @"CBCentralManagerStatePoweredOn" );
-            // ペリフェラルの走査開始（単一デバイスの発見イベントを重複して発行させない）
-            [self.centralManager
-             scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:[EnoConst serviceUUID]]]
-             options:@{CBCentralManagerScanOptionAllowDuplicatesKey: @YES}];
-            break;
-            
-        case CBCentralManagerStatePoweredOff:
-            NSLog( @"%@", @"CBCentralManagerStatePoweredOff" );
-            break;
-            
-        case CBCentralManagerStateResetting:
-            NSLog( @"%@", @"CBCentralManagerStateResetting" );
-            break;
-            
-        case CBCentralManagerStateUnauthorized:
-            NSLog( @"%@", @"CBCentralManagerStateUnauthorized" );
-            break;
-            
-        case CBCentralManagerStateUnsupported:
-            NSLog( @"%@", @"CBCentralManagerStateUnsupported" );
-            break;
-            
-        case CBCentralManagerStateUnknown:
-            NSLog( @"%@", @"CBCentralManagerStateUnknown" );
-            break;
-            
-        default:
-            break;
-    }
-}
-
-/**
- * デバイス発見時
- */
-- (void)centralManager:(CBCentralManager *)central
- didDiscoverPeripheral:(CBPeripheral *)peripheral
-     advertisementData:(NSDictionary *)advertisementData
-                  RSSI:(NSNumber *)RSSI
-{
-    NSLog( @"%@", NSStringFromSelector(_cmd) );
-    
-    NSLog( @"Discovered %@", peripheral.name );
-    
-    // 省電力のため、他のペリフェラルの走査は停止する
-    [self.centralManager stopScan];
-    NSLog(@"Scanning stopped");
-    
-    NSLog( @"[RSSI] %@", RSSI );
-    
-    if ( self.peripheral != peripheral ) {
-        
-        // 発見されたデバイスに接続
-        self.peripheral = peripheral;
-        NSLog( @"Connecting to pripheral %@", peripheral );
-        [self.centralManager connectPeripheral:peripheral options:nil];
-    }
-}
-
-/**
- * ペリフェラル（情報を発信する側）が無事に接続された時
- */
-- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
-{
-    // メソッド名表示
-    NSLog( @"%@", NSStringFromSelector(_cmd) );
-    NSLog( @"%@", peripheral.description );
-    
-    // データの初期化
-    [self.data setLength:0];
-    
-    // デリゲート設定
-    self.peripheral.delegate = self;
-    
-    // サービスの探索を開始
-    [self.peripheral discoverServices:@[[CBUUID UUIDWithString:[EnoConst serviceUUID]]]];
-}
-
-# pragma mark - CBPeripheralDelegate
-
-/**
- * ペリフェラルの利用可能なサービスが見つかった
- */
-- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error
-{
-    NSLog( @"%@", NSStringFromSelector(_cmd) );
-    
-    if ( error ) {
-        
-        NSLog( @"[error] %@", [error localizedDescription] );
-        return;
-    }
-    
-    for ( CBService *service in peripheral.services ) {
-        
-        NSLog( @"Service found with UUID: %@", service.UUID );
-        
-        if ( [service.UUID isEqual:[CBUUID UUIDWithString:[EnoConst serviceUUID]] ] ) {
-            
-            NSLog( @"discover characteristic!" );
-            
-            // サービスの特性を検出する
-            [self.peripheral
-             discoverCharacteristics:@[[CBUUID UUIDWithString:[EnoConst characteristicUUID]]]
-             forService:service];
-        }
-    }
-}
-
-/**
- * 指定したサービスのCharacteristicsを見つけた
- */
-- (void)peripheral:(CBPeripheral *)peripheral
-didDiscoverCharacteristicsForService:(CBService *)service
-             error:(NSError *)error
-{
-    NSLog( @"%@", NSStringFromSelector(_cmd) );
-    
-    if ( error ) {
-        
-        NSLog( @"[error] %@", [error localizedDescription] );
-        return;
-    }
-    
-    if ( [service.UUID isEqual:[CBUUID UUIDWithString:[EnoConst serviceUUID]]] ) {
-        
-        for ( CBCharacteristic *characteristic in service.characteristics ) {
-            
-            NSLog( @"characteristices is found!" );
-            
-            // 特性の値を読み取る
-            [peripheral readValueForCharacteristic:characteristic];
-        }
-    }
-}
-
-/**
- * characteristicの値が変更された
- */
-- (void)peripheral:(CBPeripheral *)peripheral
-didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic
-             error:(NSError *)error
-{
-    NSLog( @"%@", NSStringFromSelector(_cmd) );
-    
-    if ( error ) {
-        
-        NSLog( @"[error] %@", [error localizedDescription] );
-        return;
-    }
-    
-    NSLog( @"no error" );
-    
-    NSData *data = characteristic.value;
-    NSLog( @"[data] %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] );
-    
-    // すれ違い一覧更新
-    [EnoNSUserDefaults addPassingsWithJsondata:data];
-    self.passings = [EnoNSUserDefaults getPassings];
-    
-    [self.tableview reloadData];
-    
-    [self.centralManager cancelPeripheralConnection:peripheral];
-}
-
-/**
- * 周辺機器が起動したり、characteristicの値の通知の提供を停止する要求を受け取ったとき
- */
-- (void)peripheral:(CBPeripheral *)peripheral
-didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic
-             error:(NSError *)error
-{
-    NSLog( @"%@", NSStringFromSelector(_cmd) );
-    
-    if ( error ) {
-        
-        NSLog( @"[error] %@", [error localizedDescription] );
-        return;
-    }
-    
-    if ( ![characteristic.UUID isEqual:[CBUUID UUIDWithString:[EnoConst characteristicUUID]]] ) {
-        
-        return ;
-    }
-    
-    if ( characteristic.isNotifying ) {
-        
-        NSLog( @"Notification began on %@", characteristic );
-        [peripheral readValueForCharacteristic:characteristic];
-    }
-    else {
-        
-        NSLog( @"Notification stopped on %@. Disconnecting", characteristic );
-        [self.centralManager cancelPeripheralConnection:self.peripheral];
-    }
 }
 
 @end

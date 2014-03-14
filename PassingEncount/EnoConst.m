@@ -25,4 +25,9 @@
     return @"6E0F524D-46B3-4A68-9168-D19D277CD845";
 }
 
++ (NSString *)serviceIdentifer
+{
+    return @"ENO_PASSING_ENCOUNT";
+}
+
 @end

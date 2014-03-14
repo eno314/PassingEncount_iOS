@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "EnoIBeaconReceiver.h"
+
 @interface EnoAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
